@@ -4,6 +4,8 @@
   "description": "",
   "main": "gaia.js",
   "scripts": {
+    "start": "babel-node --presets=latest -- ./gaia.js",
+    "start:dev": "nodemon --exec npm run start -- ./gaia.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/joshgreenwell/Gaia/issues"
   },
-  "homepage": "https://github.com/joshgreenwell/Gaia#readme"
+  "homepage": "https://github.com/joshgreenwell/Gaia#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.18.3"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
 }
