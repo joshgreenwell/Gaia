@@ -1,0 +1,19 @@
+{
+  "name": "gaia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gaia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshgreenwell/Gaia.git"
+  },
+  "author": "Josh Greenwell <joshgreenwell99@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshgreenwell/Gaia/issues"
+  },
+  "homepage": "https://github.com/joshgreenwell/Gaia#readme"
+}
