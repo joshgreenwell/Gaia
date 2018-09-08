@@ -27,5 +27,9 @@
     "presets": [
       "latest"
     ]
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.12.6",
+    "mongodb": "^3.1.4"
   }
 }

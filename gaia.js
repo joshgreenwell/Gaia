@@ -1,3 +1,5 @@
+import * as tf from '@tensorflow/tfjs'
+
 import aether from './sub-functions/aether'
 import apollo from './sub-functions/apollo'
 import artemis from './sub-functions/artemis'
@@ -7,6 +9,8 @@ import hades from './sub-functions/hades'
 import hephestus from './sub-functions/hephaestus'
 import minerva from './sub-functions/minerva'
 import posseidon from './sub-functions/poseidon'
+
+import brain from './brain/brain'
 
 const events = []
 
@@ -21,10 +25,13 @@ const init = async () => {
   hephestus()
   minerva()
   posseidon()
+
+  brain.get()
 }
 
 const train = async (data) => {
   console.log(`[GAIA] training: ${data}`)
+  brain.update({ data })
 }
 
 const addEvent = (event) => {
@@ -47,7 +54,7 @@ const run = () => {
   setInterval(runEvents, 100)
 
   // TEST
-  setInterval(() => addEvent(train), 5000)
+  setInterval(() => addEvent(() => train(Math.random())), 5000)
 }
 
 run()
